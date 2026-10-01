@@ -22,6 +22,8 @@ A pair for starting fresh sessions without losing the goal.
 
 I run `/handoff` when I finish a session and `/pickup` to start the next one. The context window resets, and the goal carries over. Since each pickup consumes the note, it stays short, and anything meant to last ends up in the repo.
 
+When a session finishes everything, `/handoff` still saves what should last, then writes no note. The next `/pickup` finds no note and offers the top of the backlog instead.
+
 `/handoff` only runs when you type it. Claude can suggest it but won't trigger it on its own. Pass what the next session is for as an argument, like `/handoff build the export skill`, and the note focuses on that.
 
 Keep `.scratch/` in `.gitignore`, since the note is temporary. Commit `.planning/`, since the backlog is meant to last.

@@ -1,10 +1,10 @@
 ---
 name: pickup
-description: Resume work from .scratch/handoff.md. Use when the user says pick up, carry on, or continue from last session.
+description: Resume work from .scratch/handoff.md, or from the backlog when there is none. Use when the user says pick up, carry on, or continue from last session.
 ---
 
-1. **Read the handoff.** Read `.scratch/handoff.md` in the project root. If it is missing, tell the user and stop; mention `.scratch/handoff.prev.md` only if it exists, as the copy the last pickup already consumed.
-   Done when: the file is read, or the user knows there is none.
+1. **Read the handoff.** Read `.scratch/handoff.md` in the project root. If it is missing, the last session ended at a clean point: read the backlog (the project's own tracker, or `.planning/backlog.md`), offer its top few entries as a starting point, and wait for the user to pick. With no backlog either, tell the user there is nothing to resume and stop. Mention `.scratch/handoff.prev.md` only if the user asks about the last handoff. Steps 2 to 5 apply only when a handoff exists.
+   Done when: the file is read, or the user has the backlog's top entries, or knows there is nothing to resume.
 
 2. **Check for drift.** Note the handoff's age from its Written date and flag it if it is more than 7 days old. In a git repo, run `git log --oneline <sha>..HEAD` with the sha it recorded, and compare `git status --short` with the uncommitted files it listed. Confirm the files and folders it names are where it says.
    Done when: every commit since the sha, every working-tree difference and every missing path is noted.

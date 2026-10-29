@@ -24,7 +24,7 @@ I run `/handoff` when I finish a session and `/pickup` to start the next one. Th
 
 When a session finishes everything, `/handoff` still saves what should last, then writes no note. The next `/pickup` finds no note and offers the top of the backlog instead.
 
-`/handoff` only runs when you type it. Claude can suggest it but won't trigger it on its own. Pass what the next session is for as an argument, like `/handoff build the export skill`, and the note focuses on that.
+Claude can run either skill on its own when you say something like "hand off" or "pick up", or you can type the command. Pass what the next session is for as an argument, like `/handoff build the export skill`, and the note focuses on that.
 
 Keep `.scratch/` in `.gitignore`, since the note is temporary. Commit `.planning/`, since the backlog is meant to last.
 

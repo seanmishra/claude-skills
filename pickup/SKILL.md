@@ -15,3 +15,7 @@ description: Resume work from .scratch/handoff.md, or from the backlog when ther
 
 5. **Consume the handoff.** On the go-ahead, rename `.scratch/handoff.md` to `.scratch/handoff.prev.md`, replacing any older one, so the next `/pickup` can't resume it twice. The session now carries its contents, and `/handoff` writes a fresh one at the end.
    Done when: `.scratch/handoff.md` no longer exists.
+
+## Gotchas
+
+- `.scratch/` is gitignored, so a worktree session has none of its own. Look for the handoff in the main checkout's `.scratch/` (`git worktree list` names it first), and rename it there.

@@ -17,7 +17,7 @@ cp -R claude-skills/handoff claude-skills/pickup ~/.claude/skills/
 
 A pair for starting fresh sessions without losing the goal.
 
-- `/handoff` writes a short note to `.scratch/handoff.md` for the next session: goal, done, next, in-flight context, pointers and suggested skills, plus the commit it was written at and any uncommitted files. It aims for about 60 lines. Before writing, it moves lasting decisions and gotchas to their real home (`CLAUDE.md`, docs, a skill's gotchas, or memory) after you approve one list, and puts open work that outlives the next session in `.planning/backlog.md`, or in your project's own tracker if it has one.
+- `/handoff` writes a short note to `.scratch/handoff.md` for the next session: goal, done, next, in-flight context, pointers and suggested skills, plus the commit it was written at and any uncommitted files. It aims for about 60 lines. Before writing, it moves lasting decisions and gotchas to their real home (`CLAUDE.md`, docs, a skill's gotchas, or memory) after you approve one table of facts and destinations, and puts open work that outlives the next session in `.planning/backlog.md`, or in your project's own tracker if it has one.
 - `/pickup` reads the note in a new session, checks it against the project (commits since the recorded one, working-tree changes, the files it names), warns if it's over a week old, loads the suggested skills, and reports back. Once you say go, it renames the note to `handoff.prev.md`, so the same note can't be resumed twice and one backup stays around.
 
 I run `/handoff` when I finish a session and `/pickup` to start the next one. The context window resets, and the goal carries over. Since each pickup consumes the note, it stays short, and anything meant to last ends up in the repo.

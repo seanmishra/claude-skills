@@ -34,3 +34,4 @@ A handoff is a short note from this session to the next one. It holds only sessi
 - `.scratch/` is gitignored, so the handoff exists on one machine only. Everything that must survive goes through steps 2 and 3.
 - Commit backlog and doc changes the way the project commits other work; leave the handoff itself out of git.
 - In a worktree session, read and write `.scratch/` in the main checkout (`git worktree list` names it first), since the worktree has no `.scratch/` and `/pickup` looks in the main checkout.
+- Sean's default for an unpicked handoff in step 1 is to merge: keep its contents and add this session's state to it. Don't overwrite it, and skip the question unless its work looks finished.

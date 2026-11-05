@@ -1,6 +1,6 @@
 ---
 name: pickup
-description: Resume work from .scratch/handoff.md, or from the backlog when there is none. Use when the user says pick up, carry on, or continue from last session.
+description: Resume work from .scratch/handoff.md, or from the backlog when there is none. Use when the user says pick up, or asks to continue from the last session or a handoff.
 ---
 
 1. **Read the handoff.** Read `.scratch/handoff.md` in the project root. If it is missing, the last session ended at a clean point: read the backlog (the project's own tracker, or `.planning/backlog.md`), offer its top few entries as a starting point, and wait for the user to pick. With no backlog either, tell the user there is nothing to resume and stop. Mention `.scratch/handoff.prev.md` only if the user asks about the last handoff. Steps 2 to 5 apply only when a handoff exists.

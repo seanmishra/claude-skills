@@ -35,3 +35,4 @@ A handoff is a short note from this session to the next one. It holds only sessi
 - Commit backlog and doc changes the way the project commits other work; leave the handoff itself out of git.
 - In a worktree session, read and write `.scratch/` in the main checkout (`git worktree list` names it first), since the worktree has no `.scratch/` and `/pickup` looks in the main checkout.
 - Sean's default for an unpicked handoff in step 1 is to merge: keep its contents and add this session's state to it. Don't overwrite it, and skip the question unless its work looks finished.
+- In the Claude desktop app, text written before the turn's wrap-up call can be cut down to a short summary, so the step 2 table may never reach the user. Put the table in the closing message, after the wrap-up call, and keep the wrap-up recap and question short.
